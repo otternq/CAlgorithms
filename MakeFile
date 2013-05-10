@@ -8,11 +8,11 @@ insertionSort: dynarray.o insertionSort.o test_insertionSort.o
 test_insertionSort.o: ./tests/test_insertionSort.c
 	$(CC) -c ./tests/test_insertionSort.c
 
-dynarray.o: ./libs/dynarray.c
-	$(CC) -c ./libs/dynarray.c
+dynarray.o: ./src/libs/dynarray.c
+	$(CC) -c ./src/libs/dynarray.c
 
-insertionSort.o: ./sort/insertionSort.c
-	$(CC) -c ./sort/insertionSort.c
+insertionSort.o: ./src/sort/insertionSort.c
+	$(CC) -c ./src/sort/insertionSort.c
 
 start:
 	mkdir bin
