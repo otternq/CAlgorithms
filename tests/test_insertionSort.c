@@ -15,6 +15,7 @@ int main() {
 
     (*zeroToNine).array = &toBeSorted[0];
 
+    //sort the array
     insertionSort(zeroToNine);
 
     for (i = 0; i < 10; i++) {
