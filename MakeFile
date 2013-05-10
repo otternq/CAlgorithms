@@ -1,0 +1,21 @@
+manCC = gcc
+
+.TESTS: start insertionSort clean
+
+insertionSort: dynarray.o insertionSort.o test_insertionSort.o
+	$(CC) dynarray.o insertionSort.o test_insertionSort.o -o ./bin/insertionSortTest
+
+test_insertionSort.o: ./tests/test_insertionSort.c
+	$(CC) -c ./tests/test_insertionSort.c
+
+dynarray.o: ./src/libs/dynarray.c
+	$(CC) -c ./src/libs/dynarray.c
+
+insertionSort.o: ./src/sort/insertionSort.c
+	$(CC) -c ./src/sort/insertionSort.c
+
+start:
+	mkdir -p bin
+
+clean:
+	rm *.o

@@ -1,5 +1,16 @@
 #include<stdlib.h>
 
+#include "../libs/dynarray.h"
+
+/**
+ * The following algorithm is from "Introduction to Algorithms Third Edition"
+ * by Thomas H. Cormen page 18
+ */
+
+/**
+ * Uses the insertion sort algorithm to sort an array
+ * @param arr The custrom array to be sorted
+ */
 void insertionSort(struct dyn_array *arr) {
     int j;
     int i;
