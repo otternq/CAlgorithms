@@ -1,5 +1,9 @@
 #include<stdlib.h>
 
+/**
+ * Uses the insertion sort algorithm to sort an array
+ * @param arr The custrom array to be sorted
+ */
 void insertionSort(struct dyn_array *arr) {
     int j;
     int i;
