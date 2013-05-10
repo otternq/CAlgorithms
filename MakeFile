@@ -1,18 +1,18 @@
-.PHONY: .TESTS clean
+CC = gcc
 
-.TESTS: insertionSort
+.TESTS: insertionSort clean
 
 insertionSort: dynarray.o insertionSort.o test_insertionSort.o
-	gcc dynarray.o insertionSort.o test_insertionSort.o -o ./bin/insertionSortTest
+	$(CC) dynarray.o insertionSort.o test_insertionSort.o -o ./bin/insertionSortTest
 
 test_insertionSort.o: ./tests/test_insertionSort.c
-	gcc -c ./tests/test_insertionSort.c
+	$(CC) -c ./tests/test_insertionSort.c
 
 dynarray.o: ./libs/dynarray.c
-	gcc -c ./libs/dynarray.c
+	$(CC) -c ./libs/dynarray.c
 
 insertionSort.o: ./sort/insertionSort.c
-	gcc -c ./sort/insertionSort.c
+	$(CC) -c ./sort/insertionSort.c
 
 start:
 	mkdir bin
