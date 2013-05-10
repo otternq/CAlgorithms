@@ -1,6 +1,11 @@
 #include<stdlib.h>
 
 /**
+ * The following algorithm is from "Introduction to Algorithms Third Edition"
+ * by Thomas H. Cormen page 18
+ */
+
+/**
  * Uses the insertion sort algorithm to sort an array
  * @param arr The custrom array to be sorted
  */
