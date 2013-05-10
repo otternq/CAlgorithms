@@ -1,8 +1,8 @@
 #include<stdlib.h>
 #include<stdio.h>
 
-#include "../libs/dynarray.c"
-#include "../sort/insertionSort.c"
+#include "../src/libs/dynarray.h"
+#include "../src/sort/insertionSort.h"
 
 int main() {
 
@@ -15,6 +15,7 @@ int main() {
 
     (*zeroToNine).array = &toBeSorted[0];
 
+    //sort the array
     insertionSort(zeroToNine);
 
     for (i = 0; i < 10; i++) {
