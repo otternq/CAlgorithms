@@ -1,0 +1,5 @@
+tests:
+	gcc test_insertionSort.c -o insertionSortTest
+
+clean:
+	rm *Test
