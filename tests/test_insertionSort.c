@@ -1,8 +1,8 @@
 #include<stdlib.h>
 #include<stdio.h>
 
-#include "../libs/dynarray.c"
-#include "../sort/insertionSort.c"
+#include "../libs/dynarray.h"
+#include "../sort/insertionSort.h"
 
 int main() {
 

@@ -1,5 +1,7 @@
 #include<stdlib.h>
 
+#include "../libs/dynarray.h"
+
 /**
  * The following algorithm is from "Introduction to Algorithms Third Edition"
  * by Thomas H. Cormen page 18
