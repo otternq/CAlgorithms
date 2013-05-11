@@ -2,6 +2,9 @@ CC = gcc
 
 .BUILD: start test_insertionSort clean
 
+TEST: 
+	./bin/insertionSortTest
+
 get-deps:
 	curl -O https://s3.amazonaws.com/CLibraries/CUnit-2.1-2-src.tar.bz2
 	tar xjf CUnit-2.1-2-src.tar.bz2

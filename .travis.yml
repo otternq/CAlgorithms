@@ -1,3 +1,5 @@
 language: c
-install: sudo make -f MakeFile get-deps
-script: make -f MakeFile .BUILD
+install: 
+    sudo make -f MakeFile get-deps
+    make -f MakeFile .BUILD
+script: make -f MakeFile TEST
