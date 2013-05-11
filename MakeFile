@@ -1,12 +1,15 @@
-manCC = gcc
+CC = gcc
 
-.TESTS: start insertionSort clean
+.BUILD: start test_insertionSort clean
 
-insertionSort: dynarray.o insertionSort.o test_insertionSort.o
-	$(CC) dynarray.o insertionSort.o test_insertionSort.o -o ./bin/insertionSortTest
+get-deps:
+	curl -O https://s3.amazonaws.com/CLibraries/CUnit-2.1-2-src.tar.bz2
+	tar xjf CUnit-2.1-2-src.tar.bz2
+	cd CUnit-2.1-2 && ./configure && make clean && make && make install
+	rm CUnit-2.1-2-src.tar.bz2
 
-test_insertionSort.o: ./tests/test_insertionSort.c
-	$(CC) -c ./tests/test_insertionSort.c
+test_insertionSort: ./tests/test_insertionSort.c dynarray.o insertionSort.o
+	$(CC) -Wall ./tests/test_insertionSort.c dynarray.o insertionSort.o -lcunit -o ./bin/insertionSortTest 
 
 dynarray.o: ./src/libs/dynarray.c
 	$(CC) -c ./src/libs/dynarray.c
