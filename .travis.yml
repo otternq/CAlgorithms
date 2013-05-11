@@ -2,7 +2,7 @@ language: c
 install: 
  - make -f MakeFile get-deps
  - make -f MakeFile .BUILD
-after_install: 
+script: 
  - LD_LIBRARY_PATH=/usr/local/lib
- - $ export LD_LIBRARY_PATH
-script: ./bin/insertionSortTest
+ - $ export LD_LIBRARY_PATH 
+ - ./bin/insertionSortTest
