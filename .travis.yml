@@ -1,2 +1,3 @@
 language: c
-script: make -f MakeFile .TESTS
+install: make -f MakeFile get-deps
+script: make -f MakeFile .BUILD
