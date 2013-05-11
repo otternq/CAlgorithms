@@ -4,7 +4,7 @@
 #include "../src/libs/dynarray.h"
 #include "../src/sort/insertionSort.h"
 
-#include "CUnit/Basic.h"
+#include <CUnit/Basic.h>
 
 void testInsertionSortWork() {
 
